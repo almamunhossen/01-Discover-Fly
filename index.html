@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--Header and Menu Section-->
+    <header class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a class="active" href="#">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Booking Section-->
+    <main class="main-content container" id="main-content">
+        <div class="booking-form">
+            <h3>Booking Flights</h3>
+            <div class="input-group">
+                <label for="">Flying From</label>
+                <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
+            </div>
+            <div class="input-group">
+                <label for="">Flying To</label>
+                <input class="inp-style" type="text" name="" placeholder="New York, United States">
+            </div>
+            <div class="inputs">
+                <div class="input-group">
+                    <label" for="">Departure</label>
+                        <input class="inp-style" type="date" name="">
+                </div>
+                <div class="input-group">
+                    <label for="">Return</label>
+                    <input class="inp-style" type="date" name="">
+                </div>
+            </div>
+            <div class="input-group f-class">
+                <div>
+                    <label for="">First Class ($150)</label>
+                    <input id="firstClass-qty" class="inp-style inp-width" type="number" name="" value="00">
+                </div>
+                <div class="plus-minus-btn">
+                    <button onclick="qtyPlusMiuns('firstClass', false)"><i class="fas fa-minus"></i></button>
+                    <button onclick="qtyPlusMiuns('firstClass', true)"><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+
+            <div class="input-group f-class">
+                <div>
+                    <label for="">Economy ($100)</label>
+                    <input id="economy-qty" class="inp-style inp-width" type="number" name="" value="00">
+                </div>
+                <div class="plus-minus-btn">
+                    <button onclick="qtyPlusMiuns('economy', false)"><i class="fas fa-minus"></i></button>
+                    <button onclick="qtyPlusMiuns('economy', true)"><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+            <div class="calculations">
+                <div class="amount">
+                    <div class="left">
+                        <p>Subtotal</p>
+                    </div>
+                    <div class="right">
+                        <p id="sub-total"> $ 000</p>
+                    </div>
+                </div>
+
+                <div class="amount">
+                    <div class="left">
+                        <p>Charge 10% VAT</p>
+                    </div>
+                    <div class="right">
+                        <p id="vat">$00</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="amount">
+                    <div class="left">
+                        <h4>Total</h4>
+                    </div>
+                    <div class="right">
+                        <p id="total-amount">$ 000</p>
+                    </div>
+                </div>
+            </div>
+            <button id="book-now" class="btn-style">Book Now</button>
+        </div>
+
+        <div class="booking-content">
+            <h1>discover <br> around the world</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias
+                veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise
+                voluptatibus quam</p>
+        </div>
+        </section>
+
+    </main>
+
+    <section class="payment-content" id="payment-content">
+        <div class="payment-box">
+            <form action="" class="payment-form">
+                <div class="input-group">
+                    <label for="">Card Holder Name</label>
+                    <input class="booking-form" type="text1" placeholder="Card Holder Name">
+                </div>
+                <label for="">Card Number</label>
+                <input class="booking-form" type="number1" name="" id="" placeholder="Card Number">
+                <div class="inputs">
+                    <div class="input-group">
+                        <label for="date">Experition Date</label>
+                        <input class="booking-form" type="date" name="" id="" placeholder="Experition Date">
+                    </div>
+                    <div class="input-group">
+                        <label for="text">CVC</label>
+                        <input class="booking-form" type="text1" placeholder="CVC">
+                    </div>
+                </div>
+                <br>
+                <input type="checkbox" name="vehicle1" id="" type="">
+                <label for="vehicle1">Save my card for faster checkout</label><br><br>
+                <button id="paymetn-btn" class="btn-style">Complet Order (Total $ <span
+                        id="paymetn">000</span>)</button>
+
+                <div>
+                    <hr><br>
+                    <button class="btn-style"><i class="fab fa-paypal"></i><a href="https://www.paypal.com/"
+                            target="_black"></a> Paypal</button>
+
+                </div>
+            </form>
+        </div>
+
+    </section>
+
+    <section id="thank-page" class="thank-page">
+        <div class="payment-box thank-div">
+            <h1><i class="far fa-check-circle"></i></h1>
+            <h1>Thank you, Enjoy!</h1>
+            <h4></h4>Orde Successfully placed</h3>
+            <br><br>
+            <a href="index.html"> <i class="fas fa-long-arrow-alt-left"></i> Back to Home</a>
+        </div>
+    </section>
+
+
+
+    <!--Thank You-->
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
